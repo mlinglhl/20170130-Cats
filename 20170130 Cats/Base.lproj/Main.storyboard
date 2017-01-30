@@ -25,38 +25,39 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C5f-rm-K4l">
                                 <rect key="frame" x="0.0" y="10" width="375" height="657"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gPi-SE-oHi">
-                                    <size key="itemSize" width="174" height="182"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="gPi-SE-oHi">
+                                    <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CatCell" id="QGI-Uj-m3J" customClass="CatCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="174" height="182"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="174" height="182"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRP-EA-pMu">
-                                                    <rect key="frame" x="70.5" y="8" width="33.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRP-EA-pMu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="10"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a3Z-c8-5ap">
-                                                    <rect key="frame" x="0.0" y="33" width="174" height="149"/>
+                                                    <rect key="frame" x="0.0" y="10" width="50" height="40"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="rRP-EA-pMu" firstAttribute="centerX" secondItem="QGI-Uj-m3J" secondAttribute="centerX" id="Aey-Wx-dMu"/>
-                                            <constraint firstAttribute="trailing" secondItem="a3Z-c8-5ap" secondAttribute="trailing" id="Op2-87-hMN"/>
-                                            <constraint firstAttribute="bottom" secondItem="a3Z-c8-5ap" secondAttribute="bottom" id="Vf4-hc-i55"/>
-                                            <constraint firstItem="rRP-EA-pMu" firstAttribute="top" secondItem="QGI-Uj-m3J" secondAttribute="topMargin" id="ZJI-dX-KJd"/>
-                                            <constraint firstItem="a3Z-c8-5ap" firstAttribute="leading" secondItem="QGI-Uj-m3J" secondAttribute="leading" id="i7g-LI-bRR"/>
-                                            <constraint firstItem="a3Z-c8-5ap" firstAttribute="top" secondItem="rRP-EA-pMu" secondAttribute="bottom" constant="4" id="omg-W0-fbY"/>
+                                            <constraint firstItem="rRP-EA-pMu" firstAttribute="leading" secondItem="QGI-Uj-m3J" secondAttribute="leading" id="58l-QE-6gu"/>
+                                            <constraint firstAttribute="trailing" secondItem="rRP-EA-pMu" secondAttribute="trailing" id="Bk7-D7-4ax"/>
+                                            <constraint firstAttribute="trailing" secondItem="a3Z-c8-5ap" secondAttribute="trailing" id="DJN-dj-ccN"/>
+                                            <constraint firstItem="a3Z-c8-5ap" firstAttribute="leading" secondItem="QGI-Uj-m3J" secondAttribute="leading" id="EAF-Mi-fIp"/>
+                                            <constraint firstAttribute="bottom" secondItem="a3Z-c8-5ap" secondAttribute="bottom" id="Nmh-MP-NAD"/>
+                                            <constraint firstItem="a3Z-c8-5ap" firstAttribute="top" secondItem="QGI-Uj-m3J" secondAttribute="topMargin" constant="2" id="aKx-rg-z2o"/>
+                                            <constraint firstItem="rRP-EA-pMu" firstAttribute="top" secondItem="QGI-Uj-m3J" secondAttribute="top" id="snO-St-RbI"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="catImageView" destination="a3Z-c8-5ap" id="lEW-WB-dsi"/>

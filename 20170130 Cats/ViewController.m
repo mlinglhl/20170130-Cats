@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "PhotoObject.h"
 #import "CatCell.h"
+#import "CustomFlowLayout.h"
 
 @interface ViewController ()
 @property NSMutableArray *photoObjectArray;
@@ -21,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.photoObjectArray = [NSMutableArray new];
+    self.catCollectionView.collectionViewLayout = [CustomFlowLayout new];
     NSURL *url = [NSURL URLWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=4ecacf0cd6441400e02e57ec12f0bb68&tags=cat"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -37,7 +39,8 @@
             return;
         }
         NSDictionary *photoDictionary = [cats objectForKey:@"photos"];
-        for (NSDictionary *catPhoto in photoDictionary) {
+        NSArray *photoArray = [photoDictionary objectForKey:@"photo"];
+        for (NSDictionary *catPhoto in photoArray) {
             PhotoObject *photo = [PhotoObject new];
             [photo setUpPhotoWithDictionary:catPhoto];
             [self.photoObjectArray addObject:photo];

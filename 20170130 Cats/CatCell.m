@@ -17,10 +17,13 @@
 
 @end
 
+
 @implementation CatCell
+
 - (void)setPhotoObject:(PhotoObject *)photoObject {
     _photoObject = photoObject;
     self.catTitleLabel.text = photoObject.title;
     self.catImageView.image = photoObject.catImage;
 }
+
 @end

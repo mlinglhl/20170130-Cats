@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CatCell.h
 //  20170130 Cats
 //
 //  Created by Minhung Ling on 2017-01-30.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class PhotoObject;
 
-@interface ViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
-
-
+@interface CatCell : UICollectionViewCell
+@property (nonatomic) PhotoObject *photoObject;
 @end
-
